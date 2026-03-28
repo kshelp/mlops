@@ -1,0 +1,1 @@
+# pip install mlflow==3.9.0 dvc dvc-gdrive fastapi uvicorn scikit-learn pandas pytest
