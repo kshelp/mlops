@@ -17,6 +17,7 @@ try:
 except Exception as e:
     print(f"❌ 모델 로드 실패: {e}")
 
+
 # 2. 데이터 구조 정의
 class IrisInput(BaseModel):
     sepal_length: float
@@ -24,22 +25,22 @@ class IrisInput(BaseModel):
     petal_length: float
     petal_width: float
 
+
 iris_classes = ["setosa", "versicolor", "virginica"]
+
 
 # 3. 엔드포인트 설정
 @app.get("/")
 def health_check():
     return {"status": "ok", "model": "iris_classifier@production"}
 
+
 @app.post("/predict")
 def predict(data: IrisInput):
     # 입력 데이터를 numpy 배열로 변환
-    features = np.array([[
-        data.sepal_length, 
-        data.sepal_width,
-        data.petal_length, 
-        data.petal_width
-    ]])
+    features = np.array(
+        [[data.sepal_length, data.sepal_width, data.petal_length, data.petal_width]]
+    )
 
     # 모델 예측
     prediction = model.predict(features)[0]
@@ -49,5 +50,5 @@ def predict(data: IrisInput):
     return {
         "prediction": int(prediction),
         "class_name": iris_classes[prediction],
-        "probability": probability
+        "probability": probability,
     }

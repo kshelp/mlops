@@ -31,5 +31,5 @@ Thumbs.db
 
 # --- 데이터 및 로그 ---
 *.log
-data/*.csv
+#data/*.csv
 !data/*.dvc  # 중요: .dvc 파일은 절대 제외하면 안 됨 (!)
