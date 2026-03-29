@@ -23,7 +23,7 @@ import os
 #os.environ["MLFLOW_TRACKING_USERNAME"] = "<your_username>"
 #os.environ["MLFLOW_TRACKING_PASSWORD"] = "<your_token>"
 os.environ["MLFLOW_TRACKING_USERNAME"] = "kshelp"
-os.environ["MLFLOW_TRACKING_PASSWORD"] = "284318444c25d5ac718027ccdfe2b308a326ccf4"
+os.environ["MLFLOW_TRACKING_PASSWORD"] = "284318..."
 
 # 3️⃣ 모델 로딩 (기존 코드 그대로 사용 가능)
 # model = mlflow.sklearn.load_model("models:/iris_classifier@production")
