@@ -14,6 +14,9 @@ mlruns/
 mlruns.db
 artifacts/
 model/
+mlartifacts/
+mlflow.db
+
 
 # --- DVC 관련 ---
 # DVC가 관리하는 실제 데이터 본체 (dvc add 시 자동 추가되지만 명시적 확인용)
